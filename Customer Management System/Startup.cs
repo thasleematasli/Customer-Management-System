@@ -77,6 +77,8 @@ namespace Customer_Management_System
                     spa.UseReactDevelopmentServer(npmScript: "start");
                 }
             });
+            //Seed database
+            AppDbSeeding.Seed(app);
         }
     }
 }
