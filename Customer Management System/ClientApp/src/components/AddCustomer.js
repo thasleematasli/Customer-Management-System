@@ -49,7 +49,7 @@ export class AddCustomer extends Component {
     }
 
     async handleSave(event) {
-        event.preventDefault();s
+        event.preventDefault();
         const data = new FormData(event.target);
         if (this.state.customer.customerId) {
             var response1 = fetch('api/customersapi/' + this.state.customer.customerId, { method:'PUT', body: data });
