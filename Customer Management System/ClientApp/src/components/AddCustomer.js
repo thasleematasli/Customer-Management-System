@@ -49,7 +49,7 @@ export class AddCustomer extends Component {
     }
 
     async handleSave(event) {
-        event.preventDefault();
+        event.preventDefault();s
         const data = new FormData(event.target);
         if (this.state.customer.customerId) {
             var response1 = fetch('api/customersapi/' + this.state.customer.customerId, { method:'PUT', body: data });
@@ -59,7 +59,7 @@ export class AddCustomer extends Component {
             var response2 = fetch('api/customersapi', { method:'POST', body: data });
             this.props.history.push('/fetch-customers');
         }
-        
+        window.location.reload('/fetch-customers');
     }
 
     handleCancel(event) {
